@@ -1,134 +1,202 @@
 import React from 'react';
-import { Anchor, Box, Grommet, Heading, Image, List, Main, Markdown, Paragraph, ResponsiveContext } from 'grommet';
-import {Checkmark} from 'grommet-icons'
-import AppBar from './AppBar'
-import Emoji from './Emoji'
 import profileImg from './img/profileImg.png'
 import mamaKitchenImg from './img/mamaKitchenImg.png'
 
-const theme = {
-  global: {
-    colors: {
-      brand: "#FF0000",
-      heading: "#FFF",
-      list: '#999999'
+import { createMuiTheme, makeStyles, ThemeProvider } from '@material-ui/core/styles';
+import CssBaseline from '@material-ui/core/CssBaseline';
+import Typography from '@material-ui/core/Typography';
+import Container from '@material-ui/core/Container';
+import Paper from '@material-ui/core/Paper';
+import Grid from '@material-ui/core/Grid';
+import Accordion from '@material-ui/core/Accordion';
+import AccordionSummary from '@material-ui/core/AccordionSummary';
+import AccordionDetails from '@material-ui/core/AccordionDetails';
+
+import AddIcon from '@material-ui/icons/Add';
+
+import Button from '@material-ui/core/Button';
+import Divider from '@material-ui/core/Divider';
+
+import AppBar from './AppBar'
+import Emoji from './Emoji'
+
+
+const useStyles = makeStyles((theme) => ({
+  root: {
+    flexGrow: 1,
+    paddingTop: "3em",
+  },
+  paper: {
+    padding: theme.spacing(2),
+    textAlign: 'left',
+    color: theme.palette.text.secondary,
+    '& .MuiAccordion-root': {
+      padding: 0
     },
-    font: {
-      family: 'Roboto, sans serif',
-      size: '18px',
-      height: '20px',
+    '& .MuiAccordion-root::before': {
+      backgroundColor: '#FFFFFF'
     },
   },
-};
-
-// {
-//   "xxsmall": "48px",
-//   "xsmall": "96px",
-//   "small": "192px",
-//   "medium": "384px",
-//   "large": "768px",
-//   "xlarge": "1152px",
-//   "xxlarge": "1536px",
-//   "full": "100%"
-// }
+  paragraph: {
+    fontSize: "1.5em"
+  },
+  projectImg: {
+    width: "100%",
+    [theme.breakpoints.down('xs')]: {
+      width: "50%",
+    },
+  }
+}));
 
 function App() {
+
+  const classes = useStyles();
+
   return (
-    <Grommet theme={theme} >
-      <Box
-        align='center'
-        >
-      <ResponsiveContext.Consumer>
-      {size => (
-        <Box
-          direction="column"
-          width='xlarge'
-          pad="large"
+    <Container maxWidth="md" >
+    <CssBaseline />
+      <div className={classes.root}>
+        <Grid container spacing={1} style={{backgroundColor: "#FFFFFF"}}>
 
-          >
-          <AppBar />
-          <Box
-            background="light-3"
-            pad="large"
+          <Grid item xs={12} >
+            <Paper className={classes.paper} elevation={3} style={{backgroundColor: "#ff4545"}}>
+              <AppBar/>
+            </Paper>
+          </Grid>
 
-          >
-            <Main >
-              <Box
-                direction={size === ('small' || 'xsmall') ? 'column' : 'row'}
-                justify='between'
-                align='center'
-              >
-                <Box
-                  height="medium"
-                  width="medium"
-                  pad='xsmall'
-                  >
-                  <Image
-                    fit="cover"
-                    src={profileImg}
-                    />
-                </Box>
-                <Box pad='small'>
-                  <Heading>
-                    Hello!
-                    <Emoji symbol="👋🏻" label="hello" />
-                  </Heading>
-                  <Paragraph fill={size === ('small' || 'xsmall') ? true : false}>
-                    My name is Tommaso Maioli and this is my portfolio.
-                  </Paragraph>
-                  <Paragraph fill={size === ('small' || 'xsmall') ? true : false}>
-                    Since january I've started learning as <b>Frontend developer</b>, and I've succesfully completed the following courses:
-                  </Paragraph>
+          <Grid item xs={12} sm={6}>
+            <Paper className={classes.paper} elevation={0}style={{height: "100%"}}>
+              <img src={profileImg} alt="profile" style={{width: "70%"}}/>
+            </Paper>
+          </Grid>
+          <Grid item xs={12} sm={6}>
+            <Paper className={classes.paper} elevation={0} style={{height: "100%", display:"flex", alignItems: 'center'}}>
+            <Typography variant='h1'>
+            Hello!
+            <Emoji symbol="👋🏻" label="hello" />
+            <br/>I'm Tommaso Maioli
+            </Typography>
+            {/* <p className={classes.paragraph}>And this is my portfolio page</p> */}
+            </Paper>
+          </Grid>
 
-                  <ul style={{listStyleType: 'none', paddingLeft: 0, marginTop: 0}}>
-                    <li><Anchor color='list' href="https://www.udemy.com/course/the-web-developer-bootcamp/" label="The Web Developer Bootcamp" /></li>
-                    <li><Anchor color='list' href="https://www.udemy.com/course/the-advanced-web-developer-bootcamp/" label="The Advanced Web Developer Bootcamp" /></li>
-                    <li><Anchor color='list' href="https://www.udemy.com/course/modern-react-bootcamp/" label="The Modern React Bootcamp (Hooks, Context, NextJS, Router)" /></li>
-                  </ul>
-                </Box>
-              </Box>
-              <Paragraph fill={true} pad='small'>
-                During these bootcamps I've gained hands on experience over a broad variety of web development technologies, including basic knowledge regarding backend.
-              </Paragraph>
-              <Heading level={3}>
-                Personal projects
-              </Heading>
+          <Grid item xs={12} >
+            <Paper className={classes.paper} elevation={0}>
+            <Typography gutterBottom>
+            Since january I've started learning as <b>Frontend developer</b>, and I've succesfully completed the following courses:
+            </Typography>
 
-              <Box
-                direction={size === ('small' || 'xsmall') ? 'column' : 'row'}
-                justify='start'
-                align='start'
-              >
-                <Box
-                  height="small"
-                  width="small"
-                  pad='xsmall'
-                  >
-                  <Image
-                    fit="cover"
-                    src={mamaKitchenImg}
-                    />
-                </Box>
-                <Box pad='small'>
-                  <Heading level={4}>
-                    MamaKitchen
-                  </Heading>
-                  <Paragraph fill={size === ('small' || 'xsmall') ? true : false}>
-                    It's mamaKitchen folks!
-                  </Paragraph>
-                </Box>
-              </Box>
+            <Accordion elevation={0} className={classes.paper}>
+              <AccordionSummary expandIcon={<AddIcon />}>
+                <Typography variant='h6'>
+                  The Web Developer Bootcamp
+                  </Typography>
+              </AccordionSummary>
+              <AccordionDetails>
+                <Typography>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex,
+                  sit amet blandit leo lobortis eget.
+                <Button href="https://www.udemy.com/share/101W9CAEMZeFtTQXgI/" color="primary">visit course</Button>
+                </Typography>
+              </AccordionDetails>
+            </Accordion>
+            <Accordion elevation={0} className={classes.paper}>
+              <AccordionSummary expandIcon={<AddIcon />}>
+                <Typography variant='h6'>The Advanced Web Developer Bootcamp</Typography>
+              </AccordionSummary>
+              <AccordionDetails>
+                <Typography>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex,
+                  sit amet blandit leo lobortis eget.
+                  <Button href="https://www.udemy.com/share/101XvUAEMZeFtTQXgI/" color="primary">visit course</Button>
+                </Typography>
+              </AccordionDetails>
+            </Accordion>
+            <Accordion elevation={0} className={classes.paper}>
+              <AccordionSummary expandIcon={<AddIcon />}>
+                <Typography variant='h6'>The Modern React Bootcamp (Hooks, Context, NextJS, Router)</Typography>
+              </AccordionSummary>
+              <AccordionDetails>
+                <Typography>
+                React Hooks! (My favorite part of React!)
+                The new Context API
+                State management w/ useReducer + use Context (Redux Lite)
+                The basics of React (props, state, etc)
+                Master React Router
+                Build tons of projects, each with a beautiful interface
+                React State Management Patterns
+                Drag and Drop With React
+                Writing dynamically styled components w/ JSS
+                Common React Router Patterns
+                Work with tons of libraries and tools
+                Integrate UI libraries like Material UI and Bootstrap into your React apps
+                React Design Patterns and Strategies
+                Learn the ins and outs of JSS!
+                Learn how to easily use React to build responsive apps
+                Add complex animations to React projects
+                Debug and Fix buggy React code
+                Optimize React components
+                Integrate React with APIs
+                Learn the basics of Webpack in a free mini-course!
+                DOM events in React
+                Forms and complex validations in React
+                Using Context API w/ Hooks
+                  <Button href="https://www.udemy.com/share/101WbGAEMZeFtTQXgI/" color="primary">visit course</Button>
+                </Typography>
+              </AccordionDetails>
+            </Accordion>
 
+            <Divider style={{margin:'2em 0 3em'}} />
 
-            </Main>
+              <Typography variant='h2'>My personal projects:</Typography>
+            </Paper>
+          </Grid>
 
-          </Box>
-        </Box>
-      )}
-      </ResponsiveContext.Consumer>
-      </Box>
-    </Grommet>
+          <Grid item xs={12} sm={3}>
+            <Paper className={classes.paper} elevation={0}>
+              <img className={classes.projectImg} src={mamaKitchenImg} alt="mamaKitchen"/>
+            </Paper>
+          </Grid>
+          <Grid item xs={12} sm={9}>
+            <Paper className={classes.paper} elevation={0} style={{height: "100%"}}>
+            <Typography variant="h3" align="left" gutterBottom>mamaKitchen</Typography>
+              <Typography variant="body1" align="left" gutterBottom>
+              MamaKitchen aims to be the first marketplace to sell homemade food, connecting the chef with the customer.<br/>
+              </Typography>
+              <Typography variant="body2" align="left">
+              <b>Tech stack:</b> <i>React, Redux, AntDesign, Firebase (Auth, Database, Deploy).</i><br/>
+                <Typography style={{paddingTop: "1em"}}>
+                  <Button href="https://mamakitchen-989f4.firebaseapp.com/" color="primary">visit site</Button>
+                  <Button href="https://github.com/tomashco/" color="secondary">view code</Button>
+                </Typography>
+              </Typography>
+            </Paper>
+          </Grid>
+        </Grid>
+      </div>
+    </Container>
   )
 }
 
-export default App;
+
+const theme = createMuiTheme();
+
+theme.typography.h1 = {
+  fontSize: '2rem',
+};
+
+theme.typography.h2 = {
+  fontSize: '1.7rem',
+};
+
+theme.typography.h3 = {
+  fontSize: '1.5rem',
+};
+
+export default function CustomStyles() {
+  return (
+    <ThemeProvider theme={theme}>
+      <App />
+    </ThemeProvider>
+  );
+}
