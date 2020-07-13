@@ -7,11 +7,15 @@ import MenuIcon from '@material-ui/icons/Menu';
 const styles = theme => ({
   buttonCollapse: {
     [theme.breakpoints.up("sm")]: {
-      display: "none"
+      display: "none",
     },
     margin: "10px",
     boxShadow: "none",
   },
+  menuPaper: {
+    backgroundColor: "#ff4545",
+    color: "rgba(0, 0, 0, 0.54)"
+}
 });
 
 class ButtonAppBarCollapse extends Component {
@@ -51,8 +55,11 @@ class ButtonAppBarCollapse extends Component {
           }}
           open={open}
           onClose={this.handleClose}
+          classes={{ paper: classes.menuPaper }}
         >
+          <div>
           {this.props.children}
+          </div>
         </Menu>
       </div>
     );
