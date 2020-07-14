@@ -121,7 +121,7 @@ function App() {
                     applications from scratch (Express and MongoDb).
                     <br />
                     <br />
-                    <b>Technologies used during the course:</b>
+                    {/* <b>Technologies used during the course:</b> */}
                     <br />
                     <i>
                       <b>HTML5, CSS3</b>, JavaScript,
@@ -136,66 +136,14 @@ function App() {
                       color="primary"
                       style={{
                         display: 'flex',
-                        justifyContent: 'center',
+                        justifyContent: 'flex-start',
                         marginTop: '2em',
                         marginBottom: '2em',
                       }}
                     >
                       view course
                     </Button>
-                    <Typography variant="h6">Course final project:</Typography>
-                    <Grid container spacing={0}>
-                      <Grid item xs={12} sm={3}>
-                        <Paper className={classes.paper} elevation={0}>
-                          <img
-                            className={classes.projectImg}
-                            src={yelpCampImg}
-                            alt="yelpCamp"
-                          />
-                        </Paper>
-                      </Grid>
-                      <Grid item xs={12} sm={9}>
-                        <Paper
-                          className={classes.paper}
-                          elevation={0}
-                          style={{ height: '100%' }}
-                        >
-                          <Typography variant="h3" align="left" gutterBottom>
-                            YelpCamp
-                          </Typography>
-                          <Typography variant="body1" align="left" gutterBottom>
-                            Yelpcamp is a campground rating app, where users can
-                            create their own campgrounds, view and comment on
-                            others' campgrounds.
-                            <br />
-                            It is a full stack app developed using Express and
-                            MongoDb and deployed on Heroku.
-                          </Typography>
-                          <Typography variant="body2" align="left">
-                            <b>Tech stack:</b>
-                            <i>
-                              Node.js, Express.js, Passport.js, jQuery and
-                              MongoDB
-                            </i>
-                            <br />
-                            <Typography style={{ paddingTop: '1em' }}>
-                              <Button
-                                href="https://obscure-falls-44780.herokuapp.com/"
-                                color="primary"
-                              >
-                                visit site
-                              </Button>
-                              <Button
-                                href="https://github.com/tomashco/yelpCamp"
-                                color="secondary"
-                              >
-                                view code
-                              </Button>
-                            </Typography>
-                          </Typography>
-                        </Paper>
-                      </Grid>
-                    </Grid>
+                    {/* COURSE FINAL PROJECT */}
                   </Typography>
                 </AccordionDetails>
               </Accordion>
@@ -240,7 +188,7 @@ function App() {
                     <Button
                       href="https://www.udemy.com/share/101XvUAEMZeFtTQXgI/"
                       color="primary"
-                      style={{ display: 'flex', justifyContent: 'center' }}
+                      style={{ display: 'flex', justifyContent: 'flex-start' }}
                     >
                       view course
                     </Button>
@@ -274,70 +222,19 @@ function App() {
                     <Button
                       href="https://www.udemy.com/share/101WbGAEMZeFtTQXgI/"
                       color="primary"
-                      style={{ display: 'flex', justifyContent: 'center' }}
+                      style={{ display: 'flex', justifyContent: 'flex-start' }}
                     >
                       view course
                     </Button>
-                    <Typography variant="h6">Course final project:</Typography>
-
-                    <Grid container spacing={0}>
-                      <Grid item xs={12} sm={3}>
-                        <Paper className={classes.paper} elevation={0}>
-                          <img
-                            className={classes.projectImg}
-                            src={colorsAppImg}
-                            alt="colorsApp"
-                          />
-                        </Paper>
-                      </Grid>
-                      <Grid item xs={12} sm={9}>
-                        <Paper
-                          className={classes.paper}
-                          elevation={0}
-                          style={{ height: '100%' }}
-                        >
-                          <Typography variant="h3" align="left" gutterBottom>
-                            The React Colors App
-                          </Typography>
-                          <Typography
-                            variant="body1"
-                            align="left"
-                            gutterBottom
-                          />
-                          This application has a lot of features, i.e. drag and
-                          drop, animations, route transitions, complex form
-                          validations, and more.
-                          <Typography variant="body2" align="left">
-                            <br />
-                            <b>Tech stack:</b>
-                            <i>
-                              React Context, Hooks (including custom hooks),
-                              Router, JSS, Material UI
-                            </i>
-                            <Typography style={{ paddingTop: '1em' }}>
-                              <Button
-                                href="https://tomashco.github.io/colorApp/"
-                                color="primary"
-                              >
-                                visit site
-                              </Button>
-                              <Button
-                                href="https://github.com/tomashco/colorApp"
-                                color="secondary"
-                              >
-                                view code
-                              </Button>
-                            </Typography>
-                          </Typography>
-                        </Paper>
-                      </Grid>
-                    </Grid>
+                    {/* BOOTCamp Projects */}
                   </Typography>
                 </AccordionDetails>
               </Accordion>
+            </Paper>
+          </Grid>
 
-              <Divider style={{ margin: '2em 0 3em' }} />
-
+          <Grid item xs={12}>
+            <Paper className={classes.paper} elevation={0}>
               <Typography variant="h2">My personal projects:</Typography>
             </Paper>
           </Grid>
@@ -391,6 +288,111 @@ function App() {
                 </Typography>
               </Typography>
             </Paper>
+          </Grid>
+
+          <Grid item xs={12}>
+            <Paper className={classes.paper} elevation={0}>
+              <Typography variant="h3">Bootcamp projects:</Typography>
+            </Paper>
+          </Grid>
+
+          <Grid container spacing={0}>
+            <Grid item xs={12} sm={3}>
+              <Paper className={classes.paper} elevation={0}>
+                <img
+                  className={classes.projectImg}
+                  src={yelpCampImg}
+                  alt="yelpCamp"
+                />
+              </Paper>
+            </Grid>
+            <Grid item xs={12} sm={9}>
+              <Paper
+                className={classes.paper}
+                elevation={0}
+                style={{ height: '100%' }}
+              >
+                <Typography variant="h3" align="left" gutterBottom>
+                  YelpCamp
+                </Typography>
+                <Typography variant="body1" align="left" gutterBottom>
+                  Yelpcamp is a campground rating app, where users can create
+                  their own campgrounds, view and comment on others'
+                  campgrounds.
+                  <br />
+                  It is a full stack app developed using Express and MongoDb and
+                  deployed on Heroku.
+                </Typography>
+                <Typography variant="body2" align="left">
+                  <b>Tech stack:</b>
+                  <i>Node.js, Express.js, Passport.js, jQuery and MongoDB</i>
+                  <br />
+                  <Typography style={{ paddingTop: '1em' }}>
+                    <Button
+                      href="https://obscure-falls-44780.herokuapp.com/"
+                      color="primary"
+                    >
+                      visit site
+                    </Button>
+                    <Button
+                      href="https://github.com/tomashco/yelpCamp"
+                      color="secondary"
+                    >
+                      view code
+                    </Button>
+                  </Typography>
+                </Typography>
+              </Paper>
+            </Grid>
+          </Grid>
+
+          <Grid container spacing={0}>
+            <Grid item xs={12} sm={3}>
+              <Paper className={classes.paper} elevation={0}>
+                <img
+                  className={classes.projectImg}
+                  src={colorsAppImg}
+                  alt="colorsApp"
+                />
+              </Paper>
+            </Grid>
+            <Grid item xs={12} sm={9}>
+              <Paper
+                className={classes.paper}
+                elevation={0}
+                style={{ height: '100%' }}
+              >
+                <Typography variant="h3" align="left" gutterBottom>
+                  The React Colors App
+                </Typography>
+                <Typography variant="body1" align="left" gutterBottom>
+                  This application has a lot of features, i.e. drag and drop,
+                  animations, route transitions, complex form validations, and
+                  more.
+                </Typography>
+                <Typography variant="body2" align="left">
+                  <b>Tech stack:</b>
+                  <i>
+                    React Context, Hooks (including custom hooks), Router, JSS,
+                    Material UI
+                  </i>
+                  <Typography style={{ paddingTop: '1em' }}>
+                    <Button
+                      href="https://tomashco.github.io/colorApp/"
+                      color="primary"
+                    >
+                      visit site
+                    </Button>
+                    <Button
+                      href="https://github.com/tomashco/colorApp"
+                      color="secondary"
+                    >
+                      view code
+                    </Button>
+                  </Typography>
+                </Typography>
+              </Paper>
+            </Grid>
           </Grid>
 
           <Grid item xs={12} style={{ paddingBottom: '3em' }}>

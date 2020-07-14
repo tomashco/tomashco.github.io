@@ -42,7 +42,7 @@ const AppBar = (props) => {
         Tomashco
       </Typography>
       <ButtonAppBarCollapse>
-        <div className={classes.flexButton}>
+        <div className={classes.flexButton} style={{ flexDirection: 'column' }}>
           <Link href="https://github.com/tomashco" color="inherit">
             <GitHubIcon style={{ fontSize: '2em' }} />
           </Link>
