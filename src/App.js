@@ -25,7 +25,6 @@ import profileImg from './img/profileImg.png';
 import mamaKitchenImg from './img/mamaKitchenImg.png';
 import yelpCampImg from './img/yelpCamp.png';
 import colorsAppImg from './img/colorsApp.png';
-import CVTommasoMaioli2020 from './doc/2020CVTommasoMaioli.pdf';
 
 import AppBar from './AppBar';
 import Emoji from './Emoji';
@@ -103,8 +102,11 @@ function App() {
           <Grid item xs={12}>
             <Paper className={classes.paper} elevation={0}>
               <Typography gutterBottom>
-                Since january I've started learning as <b>Frontend developer</b>
-                , and I've succesfully completed the following courses:
+                I'm a <b>Junior Frontend Developer</b> who founds coding in React and Javascript
+                a challenging and rewarding activity. Over the last few months I've improved
+                my skills following these web development Bootcamps, delivering numerous
+                working applications utilizing HTML5, CSS3, Javascript (React, Redux, Hooks)
+                and frontend frameworks. Welcome to my Portfolio!
               </Typography>
 
               <Accordion elevation={0} className={classes.paper}>
@@ -417,7 +419,7 @@ function App() {
                 performance evaluation on working prototypes.
               </Typography>
               <Button
-                href={CVTommasoMaioli2020}
+                href="https://drive.google.com/file/d/1Ou1m3o36qq4XtdIkedpHVQW2Coogeb1z/view?usp=sharing"
                 color="primary"
                 style={{
                   display: 'flex',
