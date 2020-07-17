@@ -1,31 +1,27 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "e7b06c62c3bac80251f9b9e9a456bd64",
+    "revision": "9261552d69f05be55dc8ae9fccb8e118",
     "url": "/index.html"
   },
   {
-    "revision": "5b2b1bf465dc98bd15c1",
+    "revision": "894a6a0a8c19cd11b283",
     "url": "/static/css/main.5ecd60fb.chunk.css"
   },
   {
-    "revision": "a65eb1b5123ea67282c6",
-    "url": "/static/js/2.1b249c4c.chunk.js"
+    "revision": "b1a26b502f0526f2ed6d",
+    "url": "/static/js/2.904d176d.chunk.js"
   },
   {
     "revision": "0749163b59fbee32225059cb60c18af6",
-    "url": "/static/js/2.1b249c4c.chunk.js.LICENSE.txt"
+    "url": "/static/js/2.904d176d.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "5b2b1bf465dc98bd15c1",
-    "url": "/static/js/main.df7a0bab.chunk.js"
+    "revision": "894a6a0a8c19cd11b283",
+    "url": "/static/js/main.2c34840d.chunk.js"
   },
   {
     "revision": "605c78b83f012eab7045",
     "url": "/static/js/runtime-main.9654fdce.js"
-  },
-  {
-    "revision": "4859fab97e4ffc8b6111bc474fe58e2f",
-    "url": "/static/media/2020CVTommasoMaioli.4859fab9.pdf"
   },
   {
     "revision": "0d4a1172aa2af98848d4fa1d7a68acb7",
