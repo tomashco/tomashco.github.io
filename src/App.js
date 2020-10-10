@@ -11,14 +11,11 @@ import Typography from '@material-ui/core/Typography';
 import Container from '@material-ui/core/Container';
 import Paper from '@material-ui/core/Paper';
 import Grid from '@material-ui/core/Grid';
-import Accordion from '@material-ui/core/Accordion';
-import AccordionSummary from '@material-ui/core/AccordionSummary';
-import AccordionDetails from '@material-ui/core/AccordionDetails';
-
-import AddIcon from '@material-ui/icons/Add';
+import LinkedInIcon from '@material-ui/icons/LinkedIn';
+import GitHubIcon from '@material-ui/icons/GitHub';
+import MailIcon from '@material-ui/icons/Mail';
 
 import Button from '@material-ui/core/Button';
-import Divider from '@material-ui/core/Divider';
 
 import { Link } from '@material-ui/core';
 import profileImg from './img/profileImg.png';
@@ -341,6 +338,39 @@ function App() {
               </Paper>
             </Grid>
           </Grid>
+
+          <Paper
+            className={classes.paper}
+            elevation={3}
+            style={{
+              backgroundColor: '#ff4545',
+              width: '100%',
+              marginBottom: '2em',
+            }}
+          >
+            <Grid
+              container
+              spacing={0}
+              style={{
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+              }}
+            >
+              <Link href="https://github.com/tomashco" color="inherit">
+                <GitHubIcon style={{ fontSize: '2em' }} />
+              </Link>
+              <Link
+                href="https://linkedin.com/in/tommasomaioli"
+                color="inherit"
+              >
+                <LinkedInIcon style={{ fontSize: '2.5em' }} />
+              </Link>
+              <Link href="mailto:tommaso.maioli@gmail.com" color="inherit">
+                <MailIcon style={{ fontSize: '2.5em' }} />
+              </Link>
+            </Grid>
+          </Paper>
         </Grid>
       </div>
     </Container>
