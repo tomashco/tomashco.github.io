@@ -24,6 +24,7 @@ import { Link } from '@material-ui/core';
 import profileImg from './img/profileImg.png';
 import mamaKitchenImg from './img/mamaKitchenImg.png';
 import yelpCampImg from './img/yelpCamp.png';
+import AuctionService from './img/AuctionServiceArch.png';
 import colorsAppImg from './img/colorsApp.png';
 
 import AppBar from './AppBar';
@@ -102,138 +103,28 @@ function App() {
           <Grid item xs={12}>
             <Paper className={classes.paper} elevation={0}>
               <Typography gutterBottom>
-                I'm a <b>Junior Frontend Developer</b> who founds coding in React and Javascript
-                a challenging and rewarding activity. Over the last few months I've improved
-                my skills following these web development Bootcamps, delivering numerous
-                working applications utilizing HTML5, CSS3, Javascript (React, Redux, Hooks)
-                and frontend frameworks. Welcome to my Portfolio!
+                I am an automation engineer and over the last year I’ve
+                increased my skill towards web programming, deepening my
+                knowledge both in backend (REST API, AWS Serverless, Node.Js)
+                and frontend (HTML5, CSS3, Javascript, React). Currently, I'm
+                working as Functional Safety Engineer at Yape, an Italian
+                startup developing an autonomous mobile robot for last mile
+                delivery (
+                <Link href="www.yapemobility.it">www.yapemobility.it</Link>).
+                Welcome to my Portfolio!
               </Typography>
-
-              <Accordion elevation={0} className={classes.paper}>
-                <AccordionSummary expandIcon={<AddIcon />}>
-                  <Typography variant="h6">
-                    The Web Developer Bootcamp
-                  </Typography>
-                </AccordionSummary>
-                <AccordionDetails>
-                  <Typography>
-                    This course has been an introduction regarding current web
-                    development tools, from styling (html, css, bootstrap) to
-                    some basic javascript, up to Create full-stack web
-                    applications from scratch (Express and MongoDb).
-                    <br />
-                    <br />
-                    {/* <b>Technologies used during the course:</b> */}
-                    <br />
-                    <i>
-                      <b>HTML5, CSS3</b>, JavaScript,
-                      <b>Bootstrap 4</b>, SemanticUI, DOM Manipulation,
-                      <b>jQuery</b>, Unix(Command Line) Commands, NodeJS, NPM,
-                      <b>ExpressJS, REST, MongoDB</b>, Database Associations,
-                      Authentication, PassportJS, Authorization
-                    </i>
-                    <br />
-                    <Button
-                      href="https://www.udemy.com/share/101W9CAEMZeFtTQXgI/"
-                      color="primary"
-                      style={{
-                        display: 'flex',
-                        justifyContent: 'flex-start',
-                        marginTop: '2em',
-                        marginBottom: '2em',
-                      }}
-                    >
-                      view course
-                    </Button>
-                    {/* COURSE FINAL PROJECT */}
-                  </Typography>
-                </AccordionDetails>
-              </Accordion>
-              <Accordion elevation={0} className={classes.paper}>
-                <AccordionSummary expandIcon={<AddIcon />}>
-                  <Typography variant="h6">
-                    The Advanced Web Developer Bootcamp
-                  </Typography>
-                </AccordionSummary>
-                <AccordionDetails>
-                  <Typography>
-                    The Advanced Developer Bootcamp gave me the possibility to
-                    learn with more depth some advanced topics such as:
-                    <ul>
-                      <li>
-                        <b>Advanced CSS:</b>
-                        Flexbox, Transitions, Transforms and Animations
-                      </li>
-                      <li>
-                        <b>D3:</b>
-                        Building charts, force graphs and data visualizations
-                      </li>
-                      <li>
-                        <b>ES2015, ES2016, ES2017:</b>
-                        keywords, arrow functions, class syntax, Callbacks,
-                        Promises, Generators and Async Functions
-                      </li>
-                      <li>
-                        <b>Building Node.js APIs</b>
-                      </li>
-                      <li>
-                        <b>React, React-Router, Redux:</b>
-                        building Single Page Applications, Authentication and
-                        Authorization, Asynchronous Code with javascript
-                      </li>
-                      <li>
-                        Object Oriented Programming in Javascript, Closures and
-                        the keyword 'this', functional programming
-                      </li>
-                    </ul>
-                    <br />
-                    <Button
-                      href="https://www.udemy.com/share/101XvUAEMZeFtTQXgI/"
-                      color="primary"
-                      style={{ display: 'flex', justifyContent: 'flex-start' }}
-                    >
-                      view course
-                    </Button>
-                  </Typography>
-                </AccordionDetails>
-              </Accordion>
-              <Accordion elevation={0} className={classes.paper}>
-                <AccordionSummary expandIcon={<AddIcon />}>
-                  <Typography variant="h6">
-                    The Modern React Bootcamp (Hooks, Context, NextJS, Router)
-                  </Typography>
-                </AccordionSummary>
-                <AccordionDetails>
-                  <Typography>
-                    <ul>
-                      <li>
-                        <b>React</b>, from the very basics up to advanced topics
-                        like Next JS, React Router, Higher Order Components and
-                        Hooks and the Context API.
-                      </li>
-                      <li>
-                        <b>Hooks</b>, including multiple custom hooks.
-                      </li>
-                      <li>
-                        <b>State management</b>, using the useContext and
-                        useReducer hooks, to mimic some of the functionality of
-                        Redux.
-                      </li>
-                    </ul>
-                    <br />
-                    <Button
-                      href="https://www.udemy.com/share/101WbGAEMZeFtTQXgI/"
-                      color="primary"
-                      style={{ display: 'flex', justifyContent: 'flex-start' }}
-                    >
-                      view course
-                    </Button>
-                    {/* BOOTCamp Projects */}
-                  </Typography>
-                </AccordionDetails>
-              </Accordion>
+              <Button
+                href="https://drive.google.com/file/d/1-7TM-lMCr4PzcOX0Wniy-kULW6eOHJGg/view?usp=sharing"
+                color="primary"
+              >
+                Get Resume
+              </Button>
+              <Button href="mailto:tommaso.maioli@gmail.com" color="secondary">
+                Contact Me
+              </Button>
             </Paper>
           </Grid>
+          {/* PERSONAL PROJECTS */}
 
           <Grid item xs={12}>
             <Paper className={classes.paper} elevation={0}>
@@ -241,12 +132,13 @@ function App() {
             </Paper>
           </Grid>
 
+          {/* Mamakitchen */}
           <Grid item xs={12} sm={3}>
             <Paper className={classes.paper} elevation={0}>
               <img
                 className={classes.projectImg}
                 src={mamaKitchenImg}
-                alt="mamaKitchen"
+                alt="Mamakitchen"
               />
             </Paper>
           </Grid>
@@ -257,10 +149,10 @@ function App() {
               style={{ height: '100%' }}
             >
               <Typography variant="h3" align="left" gutterBottom>
-                mamaKitchen
+                Mamakitchen
               </Typography>
               <Typography variant="body1" align="left" gutterBottom>
-                MamaKitchen aims to be the first marketplace to sell homemade
+                Mamakitchen aims to be the first marketplace to sell homemade
                 food, connecting the chef with the customer.
                 <br />
                 The idea is that every person could be able to sell his own food
@@ -292,12 +184,64 @@ function App() {
             </Paper>
           </Grid>
 
+          {/* BOOTCAMP PROJECTS */}
           <Grid item xs={12}>
             <Paper className={classes.paper} elevation={0}>
               <Typography variant="h3">Bootcamp projects:</Typography>
             </Paper>
           </Grid>
 
+          {/* Serverless Auction Service */}
+          <Grid container spacing={0}>
+            <Grid item xs={12} sm={3}>
+              <Paper className={classes.paper} elevation={0}>
+                <img
+                  className={classes.projectImg}
+                  src={AuctionService}
+                  alt="ServerlessBootcamp"
+                />
+              </Paper>
+            </Grid>
+            <Grid item xs={12} sm={9}>
+              <Paper
+                className={classes.paper}
+                elevation={0}
+                style={{ height: '100%' }}
+              >
+                <Typography variant="h3" align="left" gutterBottom>
+                  Serverless Auctions Platform
+                </Typography>
+                <Typography variant="body1" align="left" gutterBottom>
+                  Project developed following the course{' '}
+                  <b>
+                    Serverless Framework Bootcamp: Node.js, AWS & Microservices
+                  </b>{' '}
+                  by <i>Ariel Weinberger</i>. Aim of the course has been to
+                  develop a reliable and scalable Serverless application,
+                  following the microservices architecture.
+                  <br />
+                  This application has been deployed on AWS using the Serverless
+                  framework to build the CloudFormation infrastructure
+                  (infrastructure by code).
+                </Typography>
+                <Typography variant="body2" align="left">
+                  <b>Tech stack:</b>
+                  <i>Node.js, Serverless, AWS</i>
+                  <br />
+                  <Typography style={{ paddingTop: '1em' }}>
+                    <Button
+                      href="https://github.com/tomashco/serverless-bootcamp"
+                      color="secondary"
+                    >
+                      view code
+                    </Button>
+                  </Typography>
+                </Typography>
+              </Paper>
+            </Grid>
+          </Grid>
+
+          {/* YelpCamp */}
           <Grid container spacing={0}>
             <Grid item xs={12} sm={3}>
               <Paper className={classes.paper} elevation={0}>
@@ -348,6 +292,7 @@ function App() {
             </Grid>
           </Grid>
 
+          {/* colorsApp */}
           <Grid container spacing={0}>
             <Grid item xs={12} sm={3}>
               <Paper className={classes.paper} elevation={0}>
@@ -395,44 +340,6 @@ function App() {
                 </Typography>
               </Paper>
             </Grid>
-          </Grid>
-
-          <Grid item xs={12} style={{ paddingBottom: '3em' }}>
-            <Paper className={classes.paper} elevation={0}>
-              <Typography variant="h3">About me:</Typography>
-              <Typography gutterBottom>
-                Currently, I'm working as Functional Safety Engineer at Yape, an
-                Italian startup developing an autonomous mobile robot for last
-                mile delivery (
-                <Link href="https://www.yapemobility.it">
-                  www.yapemobility.it
-                </Link>
-                ).
-              </Typography>
-              <Typography gutterBottom>
-                Previously for the same company I’ve worked as control system
-                engineer and general system engineer using a model based
-                approach, from Matlab/Simulink up to implementation on embedded
-                platform. I’ve developed the control strategies needed to
-                control the vehicle dynamics and defined strategies to manage
-                power inside the vehicle, from requirements definition to
-                performance evaluation on working prototypes.
-              </Typography>
-              <Button
-                href="https://drive.google.com/file/d/1Ou1m3o36qq4XtdIkedpHVQW2Coogeb1z/view?usp=sharing"
-                color="primary"
-                style={{
-                  display: 'flex',
-                  justifyContent: 'center',
-                }}
-              >
-                get resume
-              </Button>
-              <Typography>
-                In my spare time I practice Judo (Black belt, 2nd Dan,
-                professional level) and I'm a cycling enthusiast.
-              </Typography>
-            </Paper>
           </Grid>
         </Grid>
       </div>
