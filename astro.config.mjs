@@ -5,6 +5,7 @@ import mdx from "@astrojs/mdx";
 
 export default defineConfig({
   site: 'https://tomashco.github.io',
+  base: '/',
   integrations: [tailwind(), react(), mdx()],
   root: './src'
 });
