@@ -1,0 +1,9 @@
+---
+const options = [{ path: '/', title: 'Home'}, { path: 'about', title: 'About'}];
+---
+
+<div class="flex justify-end">
+         {options.map( p => <div class="mx-4">
+            <a href={p.path}>{p.title}</a>
+        </div>)}
+</div>
