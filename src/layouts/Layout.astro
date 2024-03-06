@@ -1,27 +1,33 @@
 ---
-import Footer from '@components/atoms/Footer.astro'
-import Head from '@components/atoms/Head.astro'
-import Navigation from '@components/molecules/Navigation.astro';
+import Footer from "@components/atoms/Footer.astro";
+import Head from "@components/atoms/Head.astro";
+import Navigation from "@components/molecules/Navigation.astro";
 export interface Props {
-	title?: string;
+  title?: string;
 }
 
 const { title } = Astro.props;
 ---
 
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-	<Head title={title}/>
-	<body>
-    <main class="h-screen w-screen flex flex-col m-auto p-6 bg-[radial-gradient(ellipse_at_left,_var(--tw-gradient-stops))] from-yellow-200 via-pink-200 to-pink-400">
+  <Head title={title} />
+  <body>
+    <main
+      class="h-screen overflow-y-scroll w-screen flex flex-col m-auto p-6 bg-[radial-gradient(ellipse_at_left,_var(--tw-gradient-stops))] from-yellow-200 via-pink-200 to-pink-400"
+    >
       <!-- <Navigation /> -->
       <div class="sm:w-8/12 sm:m-auto">
-        <h1 class="font-mono leading-normal text-4xl font-extrabold mt-6 justify-center">{title}</h1>
+        <h1
+          class="font-mono leading-normal text-4xl font-extrabold mt-6 justify-center"
+        >
+          {title}
+        </h1>
       </div>
-        <div  class="flex-1">
-          <slot/>
-        </div>
-        <Footer/>
+      <div class="flex-1">
+        <slot />
+      </div>
+      <Footer />
     </main>
-	</body>
+  </body>
 </html>

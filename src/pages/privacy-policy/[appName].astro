@@ -1,0 +1,26 @@
+---
+import Layout from "../../layouts/Layout.astro";
+export async function getStaticPaths() {
+  const contents = await Astro.glob("../../content/**/*.md");
+  return contents.map((content) => ({
+    params: {
+      appName: content.frontmatter.appName,
+    },
+    props: {
+      content,
+    },
+  }));
+}
+const { Content } = Astro.props.content;
+const { appName } = Astro.params;
+import * as content from "../pages/post/my-post.md";
+function capitalizeFirstLetter(string) {
+  return string.charAt(0).toUpperCase() + string.slice(1);
+}
+---
+
+<Layout title={`${capitalizeFirstLetter(appName)} - Privacy Policy`}>
+  <article>
+    <Content />
+  </article>
+</Layout>
