@@ -1,0 +1,35 @@
+---
+import { Markdown } from "@astropub/md";
+
+export interface Props {
+  title?: string;
+  href?: string;
+  description?: string;
+  stack?: string;
+  imgSrc?: string;
+  imgAlt?: string;
+}
+
+const { title, href, description, stack, imgSrc, imgAlt } = Astro.props;
+---
+
+<div
+  class="flex flex-row flex mt-12 sm:mt-24 justify-between items-center sm:w-8/12 sm:m-auto"
+>
+  <img
+    class="w-20 h-20 object-contain p-2 rounded-lg drop-shadow-xl bg-gradient-to-br from-purple-200 via-blue-200 to-green-300"
+    src={imgSrc}
+    alt={imgAlt}
+  />
+  <div class="mx-2 w-full">
+    <h2 class="font-mono leading-none my-2 italic">
+      <a href={href}>{title}</a>
+    </h2>
+    <p class="font-mono leading-6 font-semibold">
+      <Markdown of={description} />
+    </p>
+    <p class="mt-4 font-mono text-xs">
+      {stack}
+    </p>
+  </div>
+</div>
